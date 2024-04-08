@@ -1,14 +1,14 @@
-## Projekt: Planering
+# Projekt: Planering
 
-# Vad, Hur och Varför?
+## Vad, Hur och Varför?
 
 Min tanke på projektet är att använda login systemet som vi precis arbetat med och kombinera det med spel recensionerna som jag gjorde i ett tidigare projekt. Detta kommer fungera genom att använda och justera gammal kod från de gamla projekten och ifall jag behöver hjälp så frågar jag eller använder mig av video guides som Jens har gjort. Utöver det vill jag försöka lösa problem som jag stöter på själv inom nunjucks, node, html, css, m.m. Jag vill göra detta eftersom jag vill fördjupa min kunskap och göra så att jag verkligen förstår hur ett login-system fungerar och hur man kombinerar det med tabeller som till exempel spel recensioner för att få något som är säkert och fungerar. 
 
-# Mål
+## Mål
 
 Målet med projektet är att fördjupa mina kunskaper och se till att saker och ting sitter när det kommer till databaser och login system. Detta görs genom att kombinera databaser med login-systemet.
 
-# Ordningsplanering
+## Ordningsplanering
 
 V. 15
 Planering + början av projekt (Möjligtvis börja kopiera in gammal kod)

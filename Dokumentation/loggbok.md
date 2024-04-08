@@ -1,4 +1,6 @@
-## Vecka 15 Måndag (2024-04-08)
+## Loggbok
+
+# Vecka 15 Måndag (2024-04-08)
 
 Planeringen för slut projeketet är gjort och själva strukturen för projektet är redo. Det jag har gjort är att jag skapat projektet utifrån följande:
 
