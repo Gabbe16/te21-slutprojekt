@@ -2,7 +2,7 @@
 
 # Vecka 15 Måndag (2024-04-08)
 
-Planeringen för slut projeketet är gjort och själva strukturen för projektet är redo. Det jag har gjort är att jag skapat projektet utifrån följande:
+Planeringen för slut projeketet är nästan klar och själva strukturen för projektet är redo. Det jag har gjort är att jag skapat projektet utifrån följande:
 
 * Skapa ny mapp mkdir nytt-projekt
 * Gå in i mappen cd nytt-projekt
@@ -16,3 +16,7 @@ Planeringen för slut projeketet är gjort och själva strukturen för projektet
 * Skapa en .env fil med touch .env
 * Initiera git med git init
 * Öppna projektet i VS Code med code . och nu är projektet redo
+
+# Vecka 15 Tisdag (2024-04-09)
+
+Planeringen är slutförd och godkänd
