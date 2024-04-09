@@ -8,7 +8,7 @@ Planeringen för slut projeketet är nästan klar och själva strukturen för pr
 * Gå in i mappen cd nytt-projekt
 * Initiera npm med npm init -y i terminalen
 * Installera alla paket jag behöver med npm i express nunjucks i terminalen
-* Behöver jag databas installerar jag också npm i mysql2 dotenv
+* Jag behöver en databas så jag installerar också npm i mysql2 dotenv
 * Installera dev dependencies npm i -D nodemon
 * Skapa en .gitignore fil med touch .gitignore
 * Lägga till node_modules och .env i .gitignore
