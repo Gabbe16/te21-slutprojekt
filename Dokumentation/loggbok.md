@@ -19,4 +19,4 @@ Planeringen för slut projeketet är nästan klar och själva strukturen för pr
 
 # Vecka 15 Tisdag (2024-04-09)
 
-Planeringen är slutförd och godkänd
+
