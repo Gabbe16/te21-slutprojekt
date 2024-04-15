@@ -30,7 +30,6 @@ Planering + början av projekt (Se över gammal kod och planera routes)
 V. 16
 Kopiera in och fixa login system från gammalt projekt
 
-
 V. 17
 Kopiera in och fixa spel recensioner så att det fungerar med login systemet
 
