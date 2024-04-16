@@ -54,8 +54,9 @@ I nuläget ligger jag före planeringen och har påbörjat att föra in så att 
 * Nya views för att se recensioner (review.njk, reviews.njk och newreview.njk)
 * Nya routes för att kunna navigera till de nya njk-filerna och skapa recensioner med get och post (/review/:id, /reviews och /review/new)
 
-Idag har jag inte löst några problem utan bara fört in kod och redigerat om den på det sättet som jag behöver det till. Ett exempel på detta skulle kunna vara när jag flytta att man bara kan navigera till skriv en recension när man är inloggad. Det är fortfarande relativt mycket kvar att göra och nedan är en lista på vad:
+Idag har jag inte löst några problem utan bara fört in kod och redigerat om den på det sättet som jag behöver det till. Ett exempel på detta skulle kunna vara när jag flyttade att man bara kan navigera till skriv en recension när man är inloggad. Det är fortfarande relativt mycket kvar att göra och nedan är en lista på vad:
 
 * Man kan ta bort recensioner när man är utloggad (sina egna och andra)
 * Det syns inte vem som har skrivit vilken recension när man klickar in på en enskild (ska fixas med userid)
 * Det går inte att se bara sina egna recensioner på minasidor ännu, detta kommer göras om till minarecensioner istället för att göra namngivningen smidigare och även navigationen.
+* Möjligtvis flytta att man bara kan ta bort sina egna recensioner på minarecensioner (föredetta minasidor)
