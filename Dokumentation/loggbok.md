@@ -46,3 +46,16 @@ Ett par problem som jag stötte på idag under arbetet
 * Id och username sattes innan man loggade in vilket är en stor säkerhetsrisk
 
 För att lösa dessa problem frågade jag Jens först eftersom jag inte visste vart jag skulle börja när alla problem uppstod. Det första var att sätta ett /-tecken i routen med /minasidor eftersom jag hade glömt det. För det andra problemet testade jag en user där lösenordet inte var döljt med bcrypt vilket gjorde att det alltid var fel lösenord. Detta problem uppstod för att jag själv hade inte tagit bort eller använt bcrypt på den användaren när jag testade tidigare. För det sista flyttade jag så att id och username sätts när man väl loggar in och inte före eftersom detta är en stor säkerhetsrisk
+
+## Vecka 17 Tisdag (2024-04-16)
+
+I nuläget ligger jag före planeringen och har påbörjat att föra in så att man kan skriva och se recensioner. Det som gjordes idag var följande:
+
+* Nya views för att se recensioner (review.njk, reviews.njk och newreview.njk)
+* Nya routes för att kunna navigera till de nya njk-filerna och skapa recensioner med get och post (/review/:id, /reviews och /review/new)
+
+Idag har jag inte löst några problem utan bara fört in kod och redigerat om den på det sättet som jag behöver det till. Ett exempel på detta skulle kunna vara när jag flytta att man bara kan navigera till skriv en recension när man är inloggad. Det är fortfarande relativt mycket kvar att göra och nedan är en lista på vad:
+
+* Man kan ta bort recensioner när man är utloggad (sina egna och andra)
+* Det syns inte vem som har skrivit vilken recension när man klickar in på en enskild (ska fixas med userid)
+* Det går inte att se bara sina egna recensioner på minasidor ännu, detta kommer göras om till minarecensioner istället för att göra namngivningen smidigare och även navigationen.
