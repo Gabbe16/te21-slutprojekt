@@ -1,0 +1,16 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<main class="wrapper">
+    <h1>{{ title }}</h1>
+    <p>Här finns alla recensioner som är gjorda och finns på databasen.</p>
+    <p>Klicka in på den recension som du vill läsa.</p>
+    <p>För att skapa en recension logga in eller skapa ett konto!</a></p>
+    <ul class="reviewlist">
+        {% for review in reviews %}
+        <li><a href="/reviews/{{review.id}}">{{ review.title }}</a><a href="/reviews/{{ review.id }}/delete">Ta bort
+                review</a></li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

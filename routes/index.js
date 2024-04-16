@@ -18,9 +18,9 @@ router.post('/login', async function (req, res) {
         'SELECT id, password FROM gabriel_login WHERE username = ?', [username]
     )
 
-    const passwordenter = req.body.password
+    const passwordEntered = req.body.password
 
-    bcrypt.compare(passwordenter, user[0].password, function (err, result) {
+    bcrypt.compare(passwordEntered, user[0].password, function (err, result) {
         console.log(result)
         if (result) {
             req.session.userid = user[0].id
@@ -67,7 +67,6 @@ router.get('/minasidor', function (req, res) {
     if (req.session.login) {
         res.render('minasidor.njk', {
             username: req.session.username,
-            message: 'Välkommen'
         })
     } else {
         res.redirect('/login')
@@ -82,6 +81,83 @@ router.get('/logout', function (req, res) {
             res.redirect('/')
         }
     })
+})
+
+router.get('/reviews', async function (req, res) {
+    try {
+        const id = req.params.id
+        const [reviews] = await pool.promise().query(`SELECT gabriel_reviews.*, gabriel_games.name AS game FROM gabriel_reviews JOIN gabriel_games ON gabriel_reviews.game_id = gabriel_games.id;`)
+        console.log(reviews)
+        res.render('reviews.njk', {
+            title: 'Alla spelrecensioner',
+            reviews: reviews,
+            username: req.session.username
+        })
+    } catch (error) {
+        console.log(error)
+        res.sendStatus(500)
+    }
+})
+
+router.get('/reviews/new', async function (req, res) {
+    try {
+        const [games] = await pool.promise().query('SELECT * FROM gabriel_games')
+        return res.render('newreview.njk', {
+            title: 'Ny review',
+            games: games,
+            username: req.session.username,
+        })
+    } catch (error) {
+        console.log(error)
+        res.sendStatus(500)
+    }
+})
+
+router.get('/reviews/:id/delete', async function (req, res) {
+    try {
+        const [result] = await pool.promise().query(
+            `DELETE FROM gabriel_reviews WHERE id = ?`,
+            [req.params.id]
+        )
+        res.redirect('/reviews')
+    } catch (error) {
+        console.log(error)
+        res.sendStatus(500)
+    }
+})
+
+router.get('/reviews/:id', async function (req, res) {
+    try {
+        const [reviewWithGame] = await pool.promise().query(
+            `SELECT gabriel_reviews.*, gabriel_games.name as game, gabriel_games.description
+        FROM gabriel_reviews
+        JOIN gabriel_games
+        ON gabriel_reviews.game_id = gabriel_games.id
+        WHERE gabriel_reviews.id = ?`, [req.params.id]
+        );
+        return res.render('review.njk', {
+            title: 'Spel - ' + reviewWithGame[0].name,
+            review: reviewWithGame[0],
+            username: req.session.username
+        })
+    } catch (error) {
+        console.log(error)
+        res.sendStatus(500)
+    }
+})
+
+router.post('/reviews', async function (req, res) {
+    try {
+        const [result] = await pool.promise().query(
+            `INSERT INTO gabriel_reviews (title, text, score, game_id)
+        VALUES (?, ?, ?, ?)`,
+            [req.body.title, req.body.text, req.body.score, req.body.game]
+        )
+        res.redirect('/reviews')
+    } catch (error) {
+        console.log(error)
+        res.sendStatus(500)
+    }
 })
 
 /*

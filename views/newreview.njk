@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<main class="wrapper">
+    <h1>Jag vill att min recension också ska vara med!</h1>
+    <p>Formuläret visas på sidan /reviews/new, men när formuläret skickas så används metoden POST för att skicka det
+        till
+        /reviews</p>
+    <form action="/reviews" method="post">
+        <div class="form-element">
+            <label for="review">Titel:</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div class="form-element">
+            <label for="review">Recension:</label>
+            <input type="text" name="text" id="text">
+        </div>
+        <div class="form-element">
+            <label for="score">Score (Från 1-10):</label>
+            <input type="number" name="score" id="score">
+        </div>
+        <div class="form-element">
+            <label for="game">Spel:</label>
+            <select name="game" id="game">
+                {% for game in games %}
+                <option value="{{ game.id }}">{{ game.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class="form-element">
+            <input type="submit" value="Lägg till din recension">
+        </div>
+    </form>
+</main>
+{% endblock %}
