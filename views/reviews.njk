@@ -8,8 +8,7 @@
     <p>För att skapa en recension logga in eller skapa ett konto!</a></p>
     <ul class="reviewlist">
         {% for review in reviews %}
-        <li><a href="/reviews/{{review.id}}">{{ review.title }}</a><a href="/reviews/{{ review.id }}/delete">Ta bort
-                review</a></li>
+        <li><a href="/reviews/{{review.id}}">{{ review.title }}</a></li>
         {% endfor %}
     </ul>
 </main>

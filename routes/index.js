@@ -91,7 +91,7 @@ router.get('/reviews', async function (req, res) {
         res.render('reviews.njk', {
             title: 'Alla spelrecensioner',
             reviews: reviews,
-            username: req.session.username
+            username: req.session.username,
         })
     } catch (error) {
         console.log(error)
@@ -129,16 +129,20 @@ router.get('/reviews/:id/delete', async function (req, res) {
 router.get('/reviews/:id', async function (req, res) {
     try {
         const [reviewWithGame] = await pool.promise().query(
-            `SELECT gabriel_reviews.*, gabriel_games.name as game, gabriel_games.description
-        FROM gabriel_reviews
-        JOIN gabriel_games
-        ON gabriel_reviews.game_id = gabriel_games.id
-        WHERE gabriel_reviews.id = ?`, [req.params.id]
+            `SELECT gabriel_reviews.*, gabriel_games.name as game, gabriel_games.description, gabriel_login.username
+            FROM gabriel_reviews
+            JOIN gabriel_games
+            ON gabriel_reviews.game_id = gabriel_games.id
+            JOIN gabriel_login 
+            ON gabriel_reviews.user_id = gabriel_login.id
+            WHERE gabriel_reviews.id = ?`, [req.params.id]
         );
+        console.log(reviewWithGame[0])
         return res.render('review.njk', {
-            title: 'Spel - ' + reviewWithGame[0].name,
+            title: 'Spel',
             review: reviewWithGame[0],
-            username: req.session.username
+            username: req.session.username,
+            user: reviewWithGame[0].username
         })
     } catch (error) {
         console.log(error)
