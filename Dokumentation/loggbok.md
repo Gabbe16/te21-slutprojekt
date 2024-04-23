@@ -47,7 +47,7 @@ Ett par problem som jag stötte på idag under arbetet
 
 För att lösa dessa problem frågade jag Jens först eftersom jag inte visste vart jag skulle börja när alla problem uppstod. Det första var att sätta ett /-tecken i routen med /minasidor eftersom jag hade glömt det. För det andra problemet testade jag en user där lösenordet inte var döljt med bcrypt vilket gjorde att det alltid var fel lösenord. Detta problem uppstod för att jag själv hade inte tagit bort eller använt bcrypt på den användaren när jag testade tidigare. För det sista flyttade jag så att id och username sätts när man väl loggar in och inte före eftersom detta är en stor säkerhetsrisk
 
-## Vecka 17 Tisdag (2024-04-16)
+## Vecka 16 Tisdag (2024-04-16)
 
 I nuläget ligger jag före planeringen och har påbörjat att föra in så att man kan skriva och se recensioner. Det som gjordes idag var följande:
 
@@ -60,3 +60,35 @@ Idag har jag inte löst några problem utan bara fört in kod och redigerat om d
 * Det syns inte vem som har skrivit vilken recension när man klickar in på en enskild (ska fixas med userid)
 * Det går inte att se bara sina egna recensioner på minasidor ännu, detta kommer göras om till minarecensioner istället för att göra namngivningen smidigare och även navigationen.
 * Möjligtvis flytta att man bara kan ta bort sina egna recensioner på minarecensioner (föredetta minasidor)
+
+## Vecka 17 Måndag + Tisdag (2024-04-22 och 2024-04-23)
+
+### Måndag
+
+Under måndagen fixade jag userid och så att man kan se vem som har skrivit vilken recension. Detta är även kopplat till den som skapar en recension i inloggat läge.
+
+Ett problem jag fixade då var att ändra SQL-Frågan för att göra en JOIN på user_id från gabriel_login på gabriel_reviews för att få user_id under reviews för att sedan kunna sätta det till en user/användare.
+
+### Tisdag
+
+Under tisdagen gjorde jag följande:
+
+* Gjorde en fix för att posta user_id eftersom det blev null annars och kraschade individuella sidor på reviews
+* Säkerställde routen /reviews/new genom att redirect till login om man inte är inloggad så att personer som inte är i inloggat läge kan skriva recensioner
+* Små text ändringar i njk-filer för tydlighet
+* Formatering på filer
+* Påbörjat designen på webbsidan med gammal css-kod (Denna är inte klar ännu)
+
+Ett problem som jag löste idag var att fixa att posta user_id eftersom det kraschade individuella sidor inom reviews. Detta löstes genom att ändra på SQL frågan från:
+
+ `INSERT INTO gabriel_reviews (title, text, score, game_id)
+        VALUES (?, ?, ?, ?)`,
+            [req.body.title, req.body.text, req.body.score, req.body.game]
+
+Till:
+
+`INSERT INTO gabriel_reviews (title, text, score, game_id, user_id)
+        VALUES (?, ?, ?, ?, ?)`,
+            [req.body.title, req.body.text, req.body.score, req.body.game, req.session.userid]
+
+Det jag gjorde var att jag lade till ett extra frågetecken som ska vara ett fält där user_id hamnar i databasen och sedan en request för att få den inloggade användarens user_id
