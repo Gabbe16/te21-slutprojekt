@@ -31,16 +31,16 @@ V. 16
 Kopiera in och fixa login system från gammalt projekt
 
 V. 17
-Kopiera in och fixa spel recensioner så att det fungerar med login systemet
+Kopiera in och fixa spel recensioner så att det fungerar med login systemet. Detta innebär att man ska kunna logga in och kunna göra recensioner (Även logout, skyddade sidor m.m). Ifall allt detta fungerar kan jag börja med design och föra in css.
 
 V. 18
-Färdigställa kod för spel recensioner och login så att det fungerar
+Färdigställa kod för spel recensioner och login så att det fungerar felfritt och ifall det fungerar påbörja design. Är design redan påbörjat så fortsätter jag med det.
 
 V. 19
-Om koden är klar påbörja design annars fortsätt färdigställa kod
+Om jag inte börjat med design ska jag göra det här och designen ska bli färdig denna vecka
 
 V. 20
-Börja med design och färdigställa design
+Färdigställ projektet med kod och design
 
 V. 21
 Färdigställ projektet med kod och design

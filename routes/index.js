@@ -100,16 +100,20 @@ router.get('/reviews', async function (req, res) {
 })
 
 router.get('/reviews/new', async function (req, res) {
-    try {
-        const [games] = await pool.promise().query('SELECT * FROM gabriel_games')
-        return res.render('newreview.njk', {
-            title: 'Ny review',
-            games: games,
-            username: req.session.username,
-        })
-    } catch (error) {
-        console.log(error)
-        res.sendStatus(500)
+    if (req.session.login) {
+        try {
+            const [games] = await pool.promise().query('SELECT * FROM gabriel_games')
+            return res.render('newreview.njk', {
+                title: 'Ny review',
+                games: games,
+                username: req.session.username,
+            })
+        } catch (error) {
+            console.log(error)
+            res.sendStatus(500)
+        }
+    } else {
+        res.redirect('/login')
     }
 })
 
@@ -137,7 +141,6 @@ router.get('/reviews/:id', async function (req, res) {
             ON gabriel_reviews.user_id = gabriel_login.id
             WHERE gabriel_reviews.id = ?`, [req.params.id]
         );
-        console.log(reviewWithGame[0])
         return res.render('review.njk', {
             title: 'Spel',
             review: reviewWithGame[0],
@@ -153,9 +156,9 @@ router.get('/reviews/:id', async function (req, res) {
 router.post('/reviews', async function (req, res) {
     try {
         const [result] = await pool.promise().query(
-            `INSERT INTO gabriel_reviews (title, text, score, game_id)
-        VALUES (?, ?, ?, ?)`,
-            [req.body.title, req.body.text, req.body.score, req.body.game]
+            `INSERT INTO gabriel_reviews (title, text, score, game_id, user_id)
+        VALUES (?, ?, ?, ?, ?)`,
+            [req.body.title, req.body.text, req.body.score, req.body.game, req.session.userid]
         )
         res.redirect('/reviews')
     } catch (error) {
@@ -163,16 +166,5 @@ router.post('/reviews', async function (req, res) {
         res.sendStatus(500)
     }
 })
-
-/*
-
-router.get('/hashTest', async function (req, res) {
-    bcrypt.hash('hashtest123', 10, function (err, hash) {
-        console.log(hash)
-        return res.json(hash);
-    })
-})
-
-*/
 
 module.exports = router
