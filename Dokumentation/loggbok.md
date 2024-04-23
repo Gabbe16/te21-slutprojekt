@@ -82,13 +82,13 @@ Under tisdagen gjorde jag följande:
 Ett problem som jag löste idag var att fixa att posta user_id eftersom det kraschade individuella sidor inom reviews. Detta löstes genom att ändra på SQL frågan från:
 
  `INSERT INTO gabriel_reviews (title, text, score, game_id)
-        VALUES (?, ?, ?, ?)`,
-            [req.body.title, req.body.text, req.body.score, req.body.game]
+        VALUES (?, ?, ?, ?),
+            [req.body.title, req.body.text, req.body.score, req.body.game]`
 
 Till:
 
 `INSERT INTO gabriel_reviews (title, text, score, game_id, user_id)
-        VALUES (?, ?, ?, ?, ?)`,
-            [req.body.title, req.body.text, req.body.score, req.body.game, req.session.userid]
+        VALUES (?, ?, ?, ?, ?),
+            [req.body.title, req.body.text, req.body.score, req.body.game, req.session.userid]`
 
 Det jag gjorde var att jag lade till ett extra frågetecken som ska vara ett fält där user_id hamnar i databasen och sedan en request för att få den inloggade användarens user_id
