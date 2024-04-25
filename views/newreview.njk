@@ -2,27 +2,28 @@
 
 {% block content %}
 <main class="wrapper">
-    <h1>Jag vill att min recension också ska vara med!</h1>
-    <p>Formuläret visas på sidan /reviews/new, men när formuläret skickas så används metoden POST för att skicka
+    <h1 class="headerColor">Jag vill att min recension också ska vara med!</h1>
+    <h2 class="headerColor">Formuläret visas på sidan /reviews/new, men när formuläret skickas så används metoden POST
+        för att skicka
         det
         till
-        /reviews</p>
+        /reviews</h2>
     <div class="login">
         <form action="/reviews" method="post">
             <div class="form-element">
-                <label for="review">Titel:</label>
+                <Strong><label for="review">Titel:</label></Strong>
                 <input type="text" name="title" id="title">
             </div>
             <div class="form-element">
-                <label for="review">Recension:</label>
+                <Strong><label for="review">Recension:</label></Strong>
                 <input type="text" name="text" id="text">
             </div>
             <div class="form-element">
-                <label for="score">Score (Från 1-10):</label>
+                <Strong><label for="score">Score (Från 1-10):</label></Strong>
                 <input type="number" name="score" id="score">
             </div>
             <div class="form-element">
-                <label for="game">Spel:</label>
+                <Strong><label for="game">Spel:</label></Strong>
                 <select name="game" id="game">
                     {% for game in games %}
                     <option value="{{ game.id }}">{{ game.name }}</option>

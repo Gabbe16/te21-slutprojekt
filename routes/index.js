@@ -65,6 +65,7 @@ router.get('/signup', function (req, res) {
 router.get('/minasidor', function (req, res) {
     console.log(req.session)
     if (req.session.login) {
+
         res.render('minasidor.njk', {
             username: req.session.username,
         })
