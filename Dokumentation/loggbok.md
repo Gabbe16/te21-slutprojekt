@@ -92,3 +92,7 @@ Till:
             [req.body.title, req.body.text, req.body.score, req.body.game, req.session.userid]`
 
 Det jag gjorde var att jag lade till ett extra frågetecken som ska vara ett fält där user_id hamnar i databasen och sedan en request för att få den inloggade användarens user_id
+
+## Vecka 17 Torsdag (2024-04-25)
+
+Idag har jag fortsatt med designen på min webbsida med css och även ändrat text på njk filer. Jag har fortfarande kvar att göra designen och sedan göra så att man kan se sina egna recensioner när man är inloggad. Har jag tid kvar kommer jag också göra att man kan ta bort sina egna recensioner i inloggat läge.
