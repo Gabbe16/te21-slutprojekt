@@ -1,10 +1,19 @@
 {% extends "layout.njk" %}
+
 {% block content %}
-<main class="container">
+<main class="wrapper">
     <div class="wrapper">
         <div class="card">
-            <h1>Dina recensioner</h1>
-            
+            <h1>{{ title }}</h1>
+            <p>Här kan du se dina egna recensioner och även ta bort dem!</p>
+            <p>Det går alltså inte att ta bort andra personers recensioner</p>
+            <ul class="reviewlist">
+                {% for review in reviewsWithID %}
+                <li><a href="/reviews/{{review.id}}">{{ review.title }}</a><a href="/reviews/{{ review.id }}/delete">Ta
+                        bort
+                        review</a></li>
+                {% endfor %}
+            </ul>
         </div>
     </div>
 </main>

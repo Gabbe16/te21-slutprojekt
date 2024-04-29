@@ -62,12 +62,15 @@ router.get('/signup', function (req, res) {
     })
 })
 
-router.get('/minasidor', function (req, res) {
+router.get('/minasidor', async function (req, res) {
     console.log(req.session)
     if (req.session.login) {
-
+        const userID = req.session.userid
+        const [reviewsWithID] = await pool.promise().query('SELECT * FROM gabriel_reviews WHERE user_id = ?', [userID])
         res.render('minasidor.njk', {
+            title: 'Dina recensioner',
             username: req.session.username,
+            reviewsWithID: reviewsWithID,
         })
     } else {
         res.redirect('/login')
