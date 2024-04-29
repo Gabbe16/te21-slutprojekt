@@ -64,14 +64,11 @@
 }
 
 .card {
-    width: 100%;
     background: #474A48;
     border-radius: 2rem;
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
     margin-bottom: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 60%;
-    padding-left: 2rem;
+    padding: 2rem;
 }
 
 body,
