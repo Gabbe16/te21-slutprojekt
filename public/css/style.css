@@ -140,12 +140,15 @@ input[type=submit] {
 .reviewlist li {
     display: flex;
     justify-content: space-between;
+    margin: 10px 0
 }
 
 a {
     color: rgb(233, 233, 233);
+    text-decoration: none;
 }
 
 a:hover {
     color: rgb(131, 131, 131);
+    text-decoration: underline;
 }
