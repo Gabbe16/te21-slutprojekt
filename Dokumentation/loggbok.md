@@ -96,3 +96,9 @@ Det jag gjorde var att jag lade till ett extra frågetecken som ska vara ett fä
 ## Vecka 17 Torsdag (2024-04-25)
 
 Idag har jag fortsatt med designen på min webbsida med css och även ändrat text på njk filer. Jag har fortfarande kvar att göra designen och sedan göra så att man kan se sina egna recensioner när man är inloggad. Har jag tid kvar kommer jag också göra att man kan ta bort sina egna recensioner i inloggat läge.
+
+## Vecka 18 (2024-04-29)
+
+Idag har jag färdigställt mina recensioner sidan (föredetta mina sidora) så att man kan se sina egna recensioner när man är inloggad samt som man kan ta bort dem. Det går inte att ta bort andra användares recensioner eller se andra recensioner än sina egna på mina recensioner sidan. Det jag också gjorde var att fixa .card i css så att texten inte for utanför kortet på sidan.
+
+Ett problem jag löste idag var när jag frågade Jens om hur jag skulle fixa css för kortet. Fixen var att ta bort max width 100% och sedan ta bort all padding right, left och bottom och istället sätta den till bara padding: 2rem
