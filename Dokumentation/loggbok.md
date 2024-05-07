@@ -102,3 +102,7 @@ Idag har jag fortsatt med designen på min webbsida med css och även ändrat te
 Idag har jag färdigställt mina recensioner sidan (föredetta mina sidor) så att man kan se sina egna recensioner när man är inloggad samt som man kan ta bort dem. Det går inte att ta bort andra användares recensioner eller se andra recensioner än sina egna på mina recensioner sidan. Det jag också gjorde var att fixa .card i css så att texten inte for utanför kortet på sidan.
 
 Ett problem jag löste idag var när jag frågade Jens om hur jag skulle fixa css för kortet. Fixen var att ta bort max width 100% och sedan ta bort all padding right, left och bottom och istället sätta den till bara padding: 2rem
+
+## Vecka 19 (2024-05-07)
+
+Idag har jag arbetat med css och med hjälp av Jens så började jag använda mig utav utopia.fyi med variabler för css. Jag har även börjat kolla på videon "Be the browsers mentor, not it's micromanager" av Andy Bell där han förklarar vad utopia.fyi är och smidigare sätt att skriva css på.
