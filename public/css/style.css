@@ -1,27 +1,75 @@
+/* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+:root {
+    --step--2: clamp(0.7813rem, 0.7747rem + 0.0326vi, 0.8rem);
+    --step--1: clamp(0.9375rem, 0.9158rem + 0.1087vi, 1rem);
+    --step-0: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
+    --step-1: clamp(1.35rem, 1.2761rem + 0.3696vi, 1.5625rem);
+    --step-2: clamp(1.62rem, 1.5041rem + 0.5793vi, 1.9531rem);
+    --step-3: clamp(1.944rem, 1.771rem + 0.8651vi, 2.4414rem);
+    --step-4: clamp(2.3328rem, 2.0827rem + 1.2504vi, 3.0518rem);
+    --step-5: clamp(2.7994rem, 2.4462rem + 1.7658vi, 3.8147rem);
+
+    /* @link https://utopia.fyi/space/calculator?c=320,18,1.2,1240,20,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+    --space-3xs: clamp(0.3125rem, 0.3125rem + 0vi, 0.3125rem);
+    --space-2xs: clamp(0.5625rem, 0.5408rem + 0.1087vi, 0.625rem);
+    --space-xs: clamp(0.875rem, 0.8533rem + 0.1087vi, 0.9375rem);
+    --space-s: clamp(1.125rem, 1.0815rem + 0.2174vi, 1.25rem);
+    --space-m: clamp(1.6875rem, 1.6223rem + 0.3261vi, 1.875rem);
+    --space-l: clamp(2.25rem, 2.163rem + 0.4348vi, 2.5rem);
+    --space-xl: clamp(3.375rem, 3.2446rem + 0.6522vi, 3.75rem);
+    --space-2xl: clamp(4.5rem, 4.3261rem + 0.8696vi, 5rem);
+    --space-3xl: clamp(6.75rem, 6.4891rem + 1.3043vi, 7.5rem);
+
+    /* One-up pairs */
+    --space-3xs-2xs: clamp(0.3125rem, 0.2038rem + 0.5435vi, 0.625rem);
+    --space-2xs-xs: clamp(0.5625rem, 0.4321rem + 0.6522vi, 0.9375rem);
+    --space-xs-s: clamp(0.875rem, 0.7446rem + 0.6522vi, 1.25rem);
+    --space-s-m: clamp(1.125rem, 0.8641rem + 1.3043vi, 1.875rem);
+    --space-m-l: clamp(1.6875rem, 1.4049rem + 1.413vi, 2.5rem);
+    --space-l-xl: clamp(2.25rem, 1.7283rem + 2.6087vi, 3.75rem);
+    --space-xl-2xl: clamp(3.375rem, 2.8098rem + 2.8261vi, 5rem);
+    --space-2xl-3xl: clamp(4.5rem, 3.4565rem + 5.2174vi, 7.5rem);
+
+    /* Custom pairs */
+    --space-s-l: clamp(1.125rem, 0.6467rem + 2.3913vi, 2.5rem);
+
+    /* colors */
+    --color-bg: #9AE19D;
+    --color-fg: #474A48;
+    --color-text: rgb(233, 233, 233);
+    --color-texthover: rgb(131, 131, 131);
+    --color-textarea: #f8f8f8;
+    --color-button: #212121;
+    --color-border: #ccc;
+    --color-boxshadow: rgba(0, 0, 0, 0.15);
+}
+
+
 .container {
     max-width: 54rem;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: var(--space-s);
+    padding-right: var(--space-s);
 }
 
 .wrapper {
     width: 100%;
     max-width: 40.63rem;
-    margin: 6rem auto;
+    margin: var(--space-2xl) auto;
 }
 
 .login {
-    color: rgb(14, 14, 14);
 
     input[type=text],
     select {
         width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
+        padding: var(--space-3xs-2xs);
+        margin: var(--space-3xs-2xs) 0;
         display: inline-block;
-        border: 1px solid #ccc;
+        border: 1px solid var(--color-border);
         border-radius: 4px;
         box-sizing: border-box;
         padding: 1;
@@ -30,10 +78,10 @@
     input[type=password],
     select {
         width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
+        padding: var(--space-3xs-2xs);
+        margin: var(--space-3xs-2xs) 0;
         display: inline-block;
-        border: 1px solid #ccc;
+        border: 1px solid var(--color-border);
         border-radius: 4px;
         box-sizing: border-box;
         padding: 1;
@@ -42,10 +90,10 @@
     input[type=number],
     select {
         width: 100%;
-        padding: 12px 20px;
-        margin: 8px 0;
+        padding: var(--space-3xs-2xs);
+        margin: var(--space-3xs-2xs) 0;
         display: inline-block;
-        border: 1px solid #ccc;
+        border: 1px solid var(--color-border);
         border-radius: 4px;
         box-sizing: border-box;
 
@@ -53,10 +101,10 @@
 
     input[type=submit] {
         width: 100%;
-        background-color: #333;
-        color: white;
-        padding: 14px 20px;
-        margin: 8px 0;
+        background-color: var(--color-button);
+        color: var(--color-text);
+        padding: var(--space-2xs-xs);
+        margin: var(--space-3xs-2xs) 0;
         border: none;
         border-radius: 4px;
         cursor: pointer;
@@ -64,26 +112,23 @@
 }
 
 .card {
-    background: #474A48;
-    border-radius: 2rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
-    margin-bottom: 2rem;
-    padding: 2rem;
+    background: var(--color-fg);
+    border-radius: var(--space-m);
+    box-shadow: 0 0.5rem 1rem var(--color-boxshadow);
+    margin-bottom: var(--space-m);
+    padding: var(--space-m);
 }
 
 body,
 html {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-style: normal;
-    background-color: #9AE19D;
-    color: rgb(233, 233, 233);
+    font-size: var(--step-0);
+    background-color: var(--color-bg);
+    color: var(--color-text);
     height: 100vh;
     margin: 0;
     padding: 0;
-}
-
-.headerColor {
-    color: #2C302E;
 }
 
 .navbar {
@@ -91,16 +136,15 @@ html {
     position: top;
     top: 0;
     width: 100%;
-    background-color: #474A48;
+    background-color: var(--color-fg);
 }
-
 
 .navbar a {
     float: left;
     display: block;
-    color: rgb(233, 233, 233);
+    color: var(--color-text);
     text-align: center;
-    padding: 14px 16px;
+    padding: var(--space-2xs-xs);
     text-decoration: none;
 }
 
@@ -112,21 +156,21 @@ html {
 textarea {
     width: 100%;
     height: 150px;
-    padding: 12px 20px;
+    padding: var(--space-3xs-2xs);
     box-sizing: border-box;
-    border: 2px solid #ccc;
+    border: 2px solid var(--color-border);
     border-radius: 4px;
-    background-color: #f8f8f8;
-    font-size: 16px;
+    background-color: var(--color-textarea);
+    font-size: var(--step--1);
     resize: none;
 }
 
 input[type=submit] {
     width: 100%;
-    background-color: #333;
-    color: rgb(233, 233, 233);
-    padding: 14px 20px;
-    margin: 8px 0;
+    background-color: var(--color-button);
+    color: var(--color-text);
+    padding: var(--space-3xs-2xs);
+    margin: var(--space-3xs-2xs) 0;
     border: none;
     border-radius: 4px;
     cursor: pointer;
@@ -140,15 +184,15 @@ input[type=submit] {
 .reviewlist li {
     display: flex;
     justify-content: space-between;
-    margin: 10px 0
+    margin: var(--space-3xs-2xs) 0
 }
 
 a {
-    color: rgb(233, 233, 233);
+    color: var(--color-text);
     text-decoration: none;
 }
 
 a:hover {
-    color: rgb(131, 131, 131);
+    color: var(--color-texthover);
     text-decoration: underline;
 }

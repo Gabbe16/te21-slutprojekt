@@ -2,38 +2,43 @@
 
 {% block content %}
 <main class="wrapper">
-    <h1 class="headerColor">Jag vill att min recension också ska vara med!</h1>
-    <h2 class="headerColor">Formuläret visas på sidan /reviews/new, men när formuläret skickas så används metoden POST
-        för att skicka
-        det
-        till
-        /reviews</h2>
-    <div class="login">
-        <form action="/reviews" method="post">
-            <div class="form-element">
-                <Strong><label for="review">Titel:</label></Strong>
-                <input type="text" name="title" id="title">
+    <div class="wrapper">
+        <div class="card">
+            <h1 class="headerColor">Jag vill att min recension också ska vara med!</h1>
+            <h2 class="headerColor">Formuläret visas på sidan /reviews/new, men när formuläret skickas så används
+                metoden POST
+                för att skicka
+                det
+                till
+                /reviews</h2>
+            <div class="login">
+                <form action="/reviews" method="post">
+                    <div class="form-element">
+                        <Strong><label for="review">Titel:</label></Strong>
+                        <input type="text" name="title" id="title">
+                    </div>
+                    <div class="form-element">
+                        <Strong><label for="review">Recension:</label></Strong>
+                        <input type="text" name="text" id="text">
+                    </div>
+                    <div class="form-element">
+                        <Strong><label for="score">Score (Från 1-10):</label></Strong>
+                        <input type="number" name="score" id="score">
+                    </div>
+                    <div class="form-element">
+                        <Strong><label for="game">Spel:</label></Strong>
+                        <select name="game" id="game">
+                            {% for game in games %}
+                            <option value="{{ game.id }}">{{ game.name }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+                    <div class="form-element">
+                        <input type="submit" value="Lägg till din recension">
+                    </div>
+                </form>
             </div>
-            <div class="form-element">
-                <Strong><label for="review">Recension:</label></Strong>
-                <input type="text" name="text" id="text">
-            </div>
-            <div class="form-element">
-                <Strong><label for="score">Score (Från 1-10):</label></Strong>
-                <input type="number" name="score" id="score">
-            </div>
-            <div class="form-element">
-                <Strong><label for="game">Spel:</label></Strong>
-                <select name="game" id="game">
-                    {% for game in games %}
-                    <option value="{{ game.id }}">{{ game.name }}</option>
-                    {% endfor %}
-                </select>
-            </div>
-            <div class="form-element">
-                <input type="submit" value="Lägg till din recension">
-            </div>
-        </form>
+        </div>
     </div>
 </main>
 {% endblock %}

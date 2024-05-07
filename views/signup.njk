@@ -3,15 +3,19 @@
 {% block content %}
 
 <main class="wrapper">
-    <h2 class="headerColor">Registrera en användare</h2>
-    <div class="login">
-        <form action="/signup" method="post">
-            <label for="username">Skriv ett användarnamn</label>
-            <input type="text" id="username" name="username" required>
-            <label for="">Skriv ett lösenord</label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="Registrera">
-        </form>
+    <div class="wrapper">
+        <div class="card">
+            <h2>Registrera en användare</h2>
+            <div class="login">
+                <form action="/signup" method="post">
+                    <label for="username">Skriv ett användarnamn</label>
+                    <input type="text" id="username" name="username" required>
+                    <label for="">Skriv ett lösenord</label>
+                    <input type="password" id="password" name="password" required>
+                    <input type="submit" value="Registrera">
+                </form>
+            </div>
+        </div>
     </div>
 </main>
 
