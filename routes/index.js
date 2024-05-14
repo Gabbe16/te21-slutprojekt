@@ -29,7 +29,7 @@ router.post('/login', async function (req, res) {
             console.log(req.session)
         } else {
             console.log(err)
-            res.json({ message: 'Fel lösenord' })
+            res.render('login.njk')
         }
     });
 })
@@ -126,7 +126,7 @@ router.get('/reviews/:id/delete', async function (req, res) {
             `DELETE FROM gabriel_reviews WHERE id = ?`,
             [req.params.id]
         )
-        res.redirect('/reviews')
+        res.redirect('/minasidor')
     } catch (error) {
         console.log(error)
         res.sendStatus(500)
@@ -166,7 +166,7 @@ router.post('/reviews', async function (req, res) {
         res.redirect('/reviews')
     } catch (error) {
         console.log(error)
-        res.sendStatus(500)
+        res.redirect('/reviews')
     }
 })
 
