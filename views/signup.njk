@@ -1,20 +1,17 @@
 {% extends "layout.njk" %}
-
 {% block content %}
 
 <main class="wrapper">
-    <div class="wrapper">
-        <div class="card">
-            <h2>Registrera en användare</h2>
-            <div class="login">
-                <form action="/signup" method="post">
-                    <label for="username">Skriv ett användarnamn</label>
-                    <input type="text" id="username" name="username" required>
-                    <label for="">Skriv ett lösenord</label>
-                    <input type="password" id="password" name="password" required>
-                    <input type="submit" value="Registrera">
-                </form>
-            </div>
+    <div class="card">
+        <h2>Registrera en användare</h2>
+        <div class="login">
+            <form action="/signup" method="post">
+                <label for="username">Skriv ett användarnamn</label>
+                <input type="text" id="username" name="username" required>
+                <label for="">Skriv ett lösenord</label>
+                <input type="password" id="password" name="password" required>
+                <input type="submit" value="Registrera">
+            </form>
         </div>
     </div>
 </main>
