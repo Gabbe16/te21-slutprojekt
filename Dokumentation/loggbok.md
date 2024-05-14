@@ -97,12 +97,16 @@ Det jag gjorde var att jag lade till ett extra frågetecken som ska vara ett fä
 
 Idag har jag fortsatt med designen på min webbsida med css och även ändrat text på njk filer. Jag har fortfarande kvar att göra designen och sedan göra så att man kan se sina egna recensioner när man är inloggad. Har jag tid kvar kommer jag också göra att man kan ta bort sina egna recensioner i inloggat läge.
 
-## Vecka 18 (2024-04-29)
+## Vecka 18 Måndag (2024-04-29) 
 
 Idag har jag färdigställt mina recensioner sidan (föredetta mina sidor) så att man kan se sina egna recensioner när man är inloggad samt som man kan ta bort dem. Det går inte att ta bort andra användares recensioner eller se andra recensioner än sina egna på mina recensioner sidan. Det jag också gjorde var att fixa .card i css så att texten inte for utanför kortet på sidan.
 
 Ett problem jag löste idag var när jag frågade Jens om hur jag skulle fixa css för kortet. Fixen var att ta bort max width 100% och sedan ta bort all padding right, left och bottom och istället sätta den till bara padding: 2rem
 
-## Vecka 19 (2024-05-07)
+## Vecka 19 Tisdag (2024-05-07)
 
-Idag har jag arbetat med css och med hjälp av Jens så började jag använda mig utav utopia.fyi med variabler för css. Jag har även börjat kolla på videon "Be the browsers mentor, not it's micromanager" av Andy Bell där han förklarar vad utopia.fyi är och smidigare sätt att skriva css på.
+Idag har jag arbetat med css och med hjälp av Jens så började jag använda mig utav utopia.fyi med variabler för css. Jag har även börjat kolla på videon "Be the browsers mentor, not it's micromanager" av Andy Bell där han förklarar vad utopia.fyi är och hur man på ett smidigare sätt kan skriva css.
+
+## Vecka 20 Tisdag (2024-05-14)
+
+Under denn lektion har jag arbetat med att färdigställa min kod för slutprojektet genom att formatera filer, hantera problem som till exemepl om man loggar in med fel lösenord eller inte fyller i formuläret och till sist att arbeta med css utifrån och med hjälp av utopia.fyi.
