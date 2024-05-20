@@ -29,7 +29,9 @@ router.post('/login', async function (req, res) {
             console.log(req.session)
         } else {
             console.log(err)
-            res.render('login.njk')
+            res.render('login.njk', {
+                error: err,
+            })
         }
     });
 })

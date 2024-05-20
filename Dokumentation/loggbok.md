@@ -110,3 +110,5 @@ Idag har jag arbetat med css och med hjälp av Jens så började jag använda mi
 ## Vecka 20 Tisdag (2024-05-14)
 
 Under denn lektion har jag arbetat med att färdigställa min kod för slutprojektet genom att formatera filer, hantera problem som till exemepl om man loggar in med fel lösenord eller inte fyller i formuläret och till sist att arbeta med css utifrån och med hjälp av utopia.fyi.
+
+## Vecka 20 Torsdag (2024-05-16)
