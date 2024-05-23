@@ -111,4 +111,14 @@ Idag har jag arbetat med css och med hjälp av Jens så började jag använda mi
 
 Under denn lektion har jag arbetat med att färdigställa min kod för slutprojektet genom att formatera filer, hantera problem som till exemepl om man loggar in med fel lösenord eller inte fyller i formuläret och till sist att arbeta med css utifrån och med hjälp av utopia.fyi.
 
-## Vecka 20 Torsdag (2024-05-16)
+## Vecka 21 Måndag (2024-05-23)
+
+Wave validering
+- 2 alerts på reviews sidan
+- 2 errors på logga in och registrera sidan
+- 2 errors och alerts på skapa recension sidan
+
+HTML och CSS validering
+- Reviews har error med Stray end tag
+- Login har error med Element title must not be empty, bad value for attribute for on label element, The value of the for attribute of the label element must be the ID of a non-hidden form control.
+- Registering har samma errors som Login
