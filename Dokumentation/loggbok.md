@@ -113,12 +113,14 @@ Under denn lektion har jag arbetat med att färdigställa min kod för slutproje
 
 ## Vecka 21 Måndag (2024-05-23)
 
-Wave validering
+Wave validering (Endast label errors)
 - 2 alerts på reviews sidan
 - 2 errors på logga in och registrera sidan
 - 2 errors och alerts på skapa recension sidan
 
 HTML och CSS validering
-- Reviews har error med Stray end tag
 - Login har error med Element title must not be empty, bad value for attribute for on label element, The value of the for attribute of the label element must be the ID of a non-hidden form control.
+
 - Registering har samma errors som Login
+
+Under denna lektion har jag påbörjat validera min kod och sakta men säkert lösa problemen som börjar dyka om som borde lösas. När det kommer till WAVE validering så har jag endast label fel vilket kommer att fixas under nästa lektion. Det fanns inga kontrastfel på min sida och därför kommer inga färger eller kontraster ändras ännu. Till sist kommer jag också självklart gå igenom mitt projekt under nästa lektion också med mer HTML och CSS validering.
