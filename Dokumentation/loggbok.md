@@ -137,3 +137,7 @@ WAVE
 - 2 alerts fixad genom att byta p-elemnt till h2-element
 - 2 alerts fixad genom att byta ett h2-element till h1-element
 - 2 errors/alerts fixad genom att byta namn på label text så att den matchar med id texten
+
+Införa bild i projektet
+- Compressed image with Optimizilla
+- Made the image smaller by opening it in paint and rezising it.
