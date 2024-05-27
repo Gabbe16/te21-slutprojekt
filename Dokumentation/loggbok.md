@@ -141,6 +141,6 @@ WAVE
 Jag har även fört in en bild för att arbeta med hur jag hanterar bilder vilket syns nedan.
 
 Införa bild i projektet
-- Compressed image with Optimizilla (https://imagecompressor.com/)
-- Made the image smaller by opening it in paint and rezising it.
-- Image CSS with max-width: 100&:, width: 100%: and height: auto:
+- Komprimerad bild med Optimizilla (https://imagecompressor.com/)
+- Gjorde bilden mindre genom att öppna den i paint och ändra storlek.
+- Image CSS med max-width: 100%:, width: 100%: and height: auto:
