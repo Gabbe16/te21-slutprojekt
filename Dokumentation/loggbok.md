@@ -127,7 +127,7 @@ Under denna lektion har jag påbörjat validera min kod och sakta men säkert l�
 
 ## Vecka 22 Måndag (2024-05-27)
 
-WAVE och Validering med validator.nu
+WAVE och Validering med validator.nu är helt klar då jag har kollat igenom hela sidan.
 
 Validator.nu färdigställd med följande:
 - Stray end tag a removed
@@ -138,6 +138,9 @@ WAVE
 - 2 alerts fixad genom att byta ett h2-element till h1-element
 - 2 errors/alerts fixad genom att byta namn på label text så att den matchar med id texten
 
+Jag har även fört in en bild för att arbeta med hur jag hanterar bilder vilket syns nedan.
+
 Införa bild i projektet
-- Compressed image with Optimizilla
+- Compressed image with Optimizilla (https://imagecompressor.com/)
 - Made the image smaller by opening it in paint and rezising it.
+- Image CSS with max-width: 100&:, width: 100%: and height: auto:
