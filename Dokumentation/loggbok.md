@@ -124,3 +124,14 @@ HTML och CSS validering
 - Registering har samma errors som Login
 
 Under denna lektion har jag påbörjat validera min kod och sakta men säkert lösa problemen som börjar dyka om som borde lösas. När det kommer till WAVE validering så har jag endast label fel vilket kommer att fixas under nästa lektion. Det fanns inga kontrastfel på min sida och därför kommer inga färger eller kontraster ändras ännu. Till sist kommer jag också självklart gå igenom mitt projekt under nästa lektion också med mer HTML och CSS validering.
+
+## Vecka 22 Måndag (2024-05-27)
+
+WAVE och Validering med validator.nu
+
+Validator.nu
+- Stray end tag a removed
+- Bad value for " " for attribute for on element label fixed on signup
+
+WAVE
+- 
