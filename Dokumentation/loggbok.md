@@ -129,9 +129,11 @@ Under denna lektion har jag påbörjat validera min kod och sakta men säkert l�
 
 WAVE och Validering med validator.nu
 
-Validator.nu
+Validator.nu färdigställd med följande:
 - Stray end tag a removed
 - Bad value for " " for attribute for on element label fixed on signup
 
 WAVE
-- 
+- 2 alerts fixad genom att byta p-elemnt till h2-element
+- 2 alerts fixad genom att byta ett h2-element till h1-element
+- 2 errors/alerts fixad genom att byta namn på label text så att den matchar med id texten
