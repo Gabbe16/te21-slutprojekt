@@ -25,8 +25,8 @@ För detta projekt har jag infört en bild på startsidan där jag gjort följan
 
 ## Säkerhet
 
-Säkerhet för projektet handlar om express-validator som ska kolla ifall de värden som kommer från en användare är säkra. Detta görs genom att i detta fall kolla om en sträng är en integer annars säger den ifrån och ifall det är kod som skrivs som en sql injection körs den inte. Däremot eftersom jag inte jobbat särskilt mycket med detta var det väldigt svårt att använda express-validator. Något som jag borde tänka på för framtiden att arbeta på är hur, varför och när jag ska använda express-validator.
+Säkerhet för projektet handlar om express-validator som ska kolla ifall de värden som kommer från en användare är säkra. Detta görs genom att i detta fall kolla om en sträng är en integer annars säger den ifrån och ifall det är kod som skrivs som en sql injection körs den inte. Däremot eftersom jag inte jobbat särskilt mycket med detta var det väldigt svårt att använda express-validator och det är något som jag borde tänka på för framtiden att arbeta på är hur, varför och när jag ska använda mig av express-validator.
 
 ## Produkten/Färdigt projekt
 
-Det färdiga projektet reflekterar det som jag har planerat eftersom målet med projektet var att kombinera spel recensioner med login systemet vi gjorde från alc-login projektet tidigare. Dessutom har jag även lärt mig mycket av att arbeta med detta projekt enligt en planering som gjorde att jag alltid visste vad jag skulle göra.
+Det färdiga projektet reflekterar det som jag har planerat eftersom målet med projektet var att kombinera spel recensioner med login systemet vi gjorde från alc-login projektet tidigare. Dessutom har jag även lärt mig mycket av att arbeta med detta projekt enligt en planering som gjorde att jag alltid visste vad jag skulle göra med både kod och design.
