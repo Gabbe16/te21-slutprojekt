@@ -1,6 +1,7 @@
 const express = require('express')
 const bcrypt = require('bcrypt')
 const router = express.Router()
+var validator = require('validator');
 const pool = require('../db')
 
 router.get('/', function (req, res) {
@@ -43,8 +44,8 @@ router.get('/login', function (req, res) {
 })
 
 router.post('/signup', async function (req, res) {
-    const username = req.body.username
-    const password = req.body.password
+    const username = req.body.username // tvätta och validera användarnam
+    const password = req.body.password // tvätta och validera lösenord
 
     bcrypt.hash(password, 10, async function (err, hash) {
         try {
@@ -136,6 +137,7 @@ router.get('/reviews/:id/delete', async function (req, res) {
 })
 
 router.get('/reviews/:id', async function (req, res) {
+    // Validera id
     try {
         const [reviewWithGame] = await pool.promise().query(
             `SELECT gabriel_reviews.*, gabriel_games.name as game, gabriel_games.description, gabriel_login.username
