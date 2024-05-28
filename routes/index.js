@@ -2,7 +2,8 @@ const express = require('express')
 const bcrypt = require('bcrypt')
 const router = express.Router()
 var validator = require('validator');
-const pool = require('../db')
+const pool = require('../db');
+const { body } = require('express-validator');
 
 router.get('/', function (req, res) {
     res.render('index.njk', {
@@ -44,8 +45,10 @@ router.get('/login', function (req, res) {
 })
 
 router.post('/signup', async function (req, res) {
-    const username = req.body.username // tvätta och validera användarnam
-    const password = req.body.password // tvätta och validera lösenord
+    const username = req.body.username // tvätta och validera användarnam body("username").notEmpty().trim().escape()
+    const password = req.body.password // tvätta och validera lösenord body("password").notEmpty().trim().escape()
+    
+
 
     bcrypt.hash(password, 10, async function (err, hash) {
         try {
