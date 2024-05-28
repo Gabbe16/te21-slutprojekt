@@ -134,8 +134,8 @@ Validator.nu färdigställd med följande:
 - Bad value for " " for attribute for on element label fixed on signup
 
 WAVE
-- 2 alerts fixad genom att byta p-elemnt till h2-element
-- 2 alerts fixad genom att byta ett h2-element till h1-element
+- 2 alerts fixade genom att byta p-element till h2-element
+- 2 alerts fixade genom att byta ett h2-element till h1-element
 - 2 errors/alerts fixad genom att byta namn på label text så att den matchar med id texten
 
 Jag har även fört in en bild för att arbeta med hur jag hanterar bilder vilket syns nedan.
