@@ -143,4 +143,4 @@ Jag har även fört in en bild för att arbeta med hur jag hanterar bilder vilke
 Införa bild i projektet
 - Komprimerad bild med Optimizilla (https://imagecompressor.com/)
 - Gjorde bilden mindre genom att öppna den i paint och ändra storlek.
-- Image CSS med max-width: 100%:, width: 100%: and height: auto:
+- Image CSS med max-width: 100%:, width: 100%: och height: auto:

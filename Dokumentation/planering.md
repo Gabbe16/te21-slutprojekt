@@ -10,7 +10,7 @@ Jag gör detta projekt genom att se över de gamla delarna av min kod där jag p
 
 Planen för routes är /reviews där man kan se alla recensioner, /review/:id för att se en specifik recensionen, /newreview eller /review/new där man kan posta sin egna recension, en /signup för att göra en användare, en /login för att logga in med en användare och en /minaSidor för att se sina egna recensioner. Själva designen när det kommer till färg syns nedan.
 
-![Css color scheme](/public/images/Colors.JPG "CSS Color plan")
+![CSS color scheme](/public/images/Colors.JPG "CSS Color plan")
 
 Jag kommer även använda den gamla databasen för spel och spel recensioner men också skapa en ny för att kunna spara skapade användare för login. Data som behöver sparas är spel (id, namn, description), recensioner (id, game_id, title, text, score) och användare (id, username, password). Ifall jag behöver hjälp så frågar jag eller använder mig av video guides som Jens har gjort. 
 
